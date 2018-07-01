@@ -48,10 +48,10 @@ RUN apt-get update && apt-get install -y \
   && apt-get autoclean \
   && chown -R discord:discord /home/discord
 
-COPY start.sh /opt/scripts/
-RUN chmod +x /opt/scripts/start.sh
+COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
 
 ENV APP_NAME="Discord"
 
 VOLUME /home/discord/
-ENTRYPOINT [ "/opt/scripts/start.sh" ]
+#ENTRYPOINT [ "/opt/scripts/start.sh" ]
