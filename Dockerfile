@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y \
   && chown -R discord:discord /home/discord
 
 COPY startapp.sh /startapp.sh
-RUN chmod +x /startapp.sh
+#RUN chmod +x /startapp.sh
 
 ENV APP_NAME="Discord"
 
