@@ -48,8 +48,8 @@ RUN apt-get update && apt-get install -y \
   && apt-get autoclean \
   && chown -R discord:discord /home/discord
 
-#COPY startapp.sh /startapp.sh
-#RUN chmod +x /startapp.sh
+COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
 
 ENV APP_NAME="Discord"
 
