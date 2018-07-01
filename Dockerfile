@@ -6,7 +6,7 @@
 #
 #
 #
-FROM jlesage/baseimage-gui:debian-8
+FROM jlesage/baseimage-gui:ubuntu-16.04
 
 RUN apt-get update && apt-get install -y \
   libc++1 \
