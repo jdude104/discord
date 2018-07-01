@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
   gconf2 \
   gconf-service \
   gvfs-bin \
+  libatomic1 \
   libasound2 \
   libcap2 \
   libgconf-2-4 \
