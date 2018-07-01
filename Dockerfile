@@ -6,7 +6,7 @@
 #
 #
 #
-FROM jlesage/baseimage-gui:ubuntu-16.04
+FROM jlesage/baseimage-gui:debian-8
 
 RUN apt-get update && apt-get install -y \
   libc++1 \
@@ -41,8 +41,8 @@ RUN apt-get update && apt-get install -y \
   curl \
   ca-certificates \
   --no-install-recommends \
-  && curl -sSL https://discordapp.com/api/download?platform=linux&format=deb > /home/discord/discord-${DISCORD_VER}.deb \
-  && dpkg -i discord-${DISCORD_VER}.deb \
+  && curl -sSL https://dl.discordapp.net/apps/linux/0.0.5/discord-0.0.5.deb > /home/discord/discord-0.0.5.deb \
+  && dpkg -i discord-0.0.5.deb \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get purge -y --auto-remove curl ca-certificates \
   && apt-get autoclean \
