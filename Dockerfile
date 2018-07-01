@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   ca-certificates \
   --no-install-recommends \
-  && curl -sSL https://dl.discordapp.net/apps/linux/${DISCORD_VER}/discord-${DISCORD_VER}.deb > /home/discord/discord-${DISCORD_VER}.deb \
+  && curl -sSL https://discordapp.com/api/download?platform=linux&format=deb > /home/discord/discord-${DISCORD_VER}.deb \
   && dpkg -i discord-${DISCORD_VER}.deb \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get purge -y --auto-remove curl ca-certificates \
